@@ -1,5 +1,12 @@
 package com.kd.chapter1.varl
 
+
+/*
+ * 
+ * 
+ */
+
+
 object Variable {
 
   def main(args: Array[String]) {
@@ -28,6 +35,10 @@ object Variable {
      
      
      diffStyle(12)
+     
+     patternMatch(12)
+     
+     patternMatch(1)
   }
 
 /***
@@ -64,5 +75,25 @@ object Variable {
    */
   def diffStyle(num1:Int)=if(num1 >18) println("You are eligible for voting..!")else println("Wait...you are not eligible")
   
+  
+  /****
+   * <p>
+   * Pattern matching is a feature of scala. It works same as switch case in other programming languages
+   * </p>
+   * 
+   */
 
+  def patternMatch(pat:Int){
+    
+    pat match{
+      case 1 => println("Case 1 executed");
+      case 2 => println("Case 2 executed");
+      case 3 => println("Case 3 executed");
+      case _ => println("no pattern match") 
+    }
+    
+  }
+  
+  
+  
 }
